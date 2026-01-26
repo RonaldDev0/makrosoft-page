@@ -33,8 +33,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className='h-[65px]' />
-      <header className='fixed top-0 left-0 z-50 w-full border-b border-black bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60 mb-16'>
+      <header className='w-full border-b border-black mb-8'>
         <div className='container mx-auto max-w-7xl px-4'>
           <nav className='flex h-16 items-center justify-between'>
             {/* Logo */}
@@ -116,7 +115,6 @@ export default function NavBar() {
           </nav>
         </div>
       </header>
-      <div className='h-8' />
     </>
   )
 }
