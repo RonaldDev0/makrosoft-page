@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
 import {
@@ -20,6 +19,7 @@ import {
   SheetTitle,
   SheetDescription
 } from './ui/sheet'
+import Logo from './logo'
 
 const navItems = [
   { label: 'Inicio', href: '/' },
@@ -36,19 +36,7 @@ export default function NavBar() {
       <header className='w-full border-b border-black mb-8'>
         <div className='container mx-auto max-w-7xl px-4'>
           <nav className='flex h-16 items-center justify-between'>
-            {/* Logo */}
-            <div className='flex items-center'>
-              <Link href='/' className='flex items-center space-x-2'>
-                <Image
-                  src='/makrosoft.png'
-                  alt='Makrosoft'
-                  width={40}
-                  height={40}
-                  className='h-8 w-8 md:h-10 md:w-10 max-h-12 max-w-12'
-                />
-                <span className='font-bold text-lg md:text-xl'>Makrosoft</span>
-              </Link>
-            </div>
+            <Logo />
 
             {/* Desktop Navigation */}
             <div className='hidden md:flex flex-1 items-center justify-center'>
