@@ -1,4 +1,5 @@
 import Hero from '@/components/hero'
+import Faq from '@/components/faq'
 
 export default function Page() {
   return (
@@ -7,7 +8,7 @@ export default function Page() {
       {/* IMG */}
       {/* EXPERTS */}
       {/* BENEFITS */}
-      {/* QUESTIONS */}
+      <Faq />
       {/* HELP */}
       {/* CONTACT */}
       {/* TESTIMONIALS */}
