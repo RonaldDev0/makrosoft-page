@@ -1,6 +1,7 @@
 import Hero from '@/components/hero'
 import Faq from '@/components/faq'
 import Help from '@/components/help'
+import Testimonials from '@/components/testimonials'
 
 export default function Page() {
   return (
@@ -12,7 +13,7 @@ export default function Page() {
       <Faq />
       <Help />
       {/* CONTACT */}
-      {/* TESTIMONIALS */}
+      <Testimonials />
     </main>
   )
 }
