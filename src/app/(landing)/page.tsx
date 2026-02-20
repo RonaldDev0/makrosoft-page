@@ -4,6 +4,7 @@ import Experts from '@/components/experts'
 import Benefits from '@/components/benefits'
 import Faq from '@/components/faq'
 import Help from '@/components/help'
+import Contact from '@/components/contact'
 import Testimonials from '@/components/testimonials'
 
 export default function Page() {
@@ -15,7 +16,7 @@ export default function Page() {
       <Benefits />
       <Faq />
       <Help />
-      {/* CONTACT */}
+      <Contact />
       <Testimonials />
     </main>
   )
