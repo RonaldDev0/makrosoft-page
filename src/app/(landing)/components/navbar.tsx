@@ -3,14 +3,14 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuLink,
   navigationMenuTriggerStyle
-} from './ui/navigation-menu'
+} from '@/components/ui/navigation-menu'
 import {
   SheetContent,
   SheetTrigger,
@@ -18,7 +18,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetDescription
-} from './ui/sheet'
+} from '@/components/ui/sheet'
 import Logo from './logo'
 
 const navItems = [
