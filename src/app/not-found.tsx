@@ -17,7 +17,13 @@ export default function NotFoundPage() {
           <Link href='/'>Ir al inicio</Link>
         </Button>
         <Button variant='outline' asChild>
-          <Link href='/contacto'>Contacto</Link>
+          <a
+            href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Contacto
+          </a>
         </Button>
       </div>
     </main>

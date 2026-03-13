@@ -49,7 +49,7 @@ export default function Experts() {
             </div>
           </div>
 
-          {/* IMG (temporal como pediste) */}
+          {/* IMG */}
           <div className='w-full'>
             <div className='aspect-square w-full rounded-xl border bg-muted' />
           </div>

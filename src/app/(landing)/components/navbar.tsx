@@ -58,19 +58,26 @@ export default function NavBar() {
 
             {/* Right items desktop */}
             <div className='hidden md:flex justify-center items-center space-x-4'>
-              <Link href='/contacto' className='bg-black text-white py-2 px-4 rounded-lg'>
+              <a
+                href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='bg-black text-white py-2 px-4 rounded-lg'
+              >
                 Contacto
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Navigation */}
             <div className='flex items-center space-x-2 md:hidden'>
-              <Link
-                href='/contacto'
+              <a
+                href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='bg-black text-white py-2 px-4 rounded-lg'
               >
                 Contacto
-              </Link>
+              </a>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                   <Button variant='ghost' size='icon'>
