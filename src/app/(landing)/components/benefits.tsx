@@ -2,6 +2,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ICard {
   subtitle: string
@@ -11,33 +12,33 @@ interface ICard {
     type: 'button' | 'arrow'
     text: string
   }[]
-  img: string | null
+  img: string
 }
 
 const cards: ICard[] = [
   {
     subtitle: 'Flexibilidad',
     title: 'Equipos de última generacion',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo dolore ullam quibusdam ipsam. Nam fuga magni eum accusamus, aut velit expedita error sint. Reiciendis hic similique atque officiis, tenetur voluptas!',
+    text: 'Accede a impresoras, multifuncionales y computadores de alto rendimiento sin realizar grandes inversiones. Soluciones flexibles de alquiler que se adaptan al crecimiento de tu empresa, con equipos siempre actualizados y listos para operar.',
     actions: [
       {
         type: 'arrow',
         text: 'Detalles'
       }
     ],
-    img: null
+    img: '/img/flexibility.png'
   },
   {
     subtitle: 'Soporte',
-    title: 'Medium length section heading goes here',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo dolore ullam quibusdam ipsam. Nam fuga magni eum accusamus, aut velit expedita error sint. Reiciendis hic similique atque officiis, tenetur voluptas!',
+    title: 'Acompañamiento técnico especializado',
+    text: 'Nuestro equipo brinda soporte preventivo y correctivo para garantizar la continuidad de tu operación. Atendemos de forma ágil cualquier incidencia y te acompañamos durante todo el ciclo del servicio.',
     actions: [
       {
         type: 'arrow',
         text: 'Más información'
       }
     ],
-    img: null
+    img: '/img/support.png'
   },
   {
     subtitle: 'Tecnología',
@@ -53,14 +54,16 @@ const cards: ICard[] = [
         text: 'Button'
       }
     ],
-    img: null
+    img: '/img/tecnology.png'
   }
 ]
 
-function ArrowLink({ href, text }: { href: string; text: string }) {
+function ArrowLink({ href, text, target, rel }: { href: string; text: string; target?: string; rel?: string }) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className='inline-flex items-center gap-2 text-sm font-medium transition hover:gap-3'
     >
       {text}
@@ -92,7 +95,7 @@ export default function Benefits() {
 
           {/* Left Column */}
           <div className='flex flex-col gap-6 h-full'>
-            {cards.slice(0, 2).map((card) => (
+            {cards.slice(0, 2).map(card => (
               <Card
                 key={card.title}
                 className='flex flex-col justify-between flex-1 overflow-hidden p-0'
@@ -112,10 +115,10 @@ export default function Benefits() {
                     </p>
 
                     <div>
-                      {card.actions.map((action) => (
+                      {card.actions.map(action => (
                         <ArrowLink
                           key={action.text}
-                          href='#'
+                          href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'
                           text={action.text}
                         />
                       ))}
@@ -123,8 +126,13 @@ export default function Benefits() {
                   </div>
 
                   {/* Image */}
-                  <div className='md:w-5/12'>
-                    <div className='h-full min-h-[180px] bg-muted' />
+                  <div className='relative md:w-5/12 min-h-[180px] overflow-hidden bg-muted'>
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      fill
+                      className='object-cover transition-transform duration-500 hover:scale-105'
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -145,16 +153,27 @@ export default function Benefits() {
               </p>
 
               <div className='flex flex-wrap gap-4 pt-2'>
-                <Button>{cards[2].actions[0].text}</Button>
+                <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>
+                  <Button>
+                    {cards[2].actions[0].text}
+                  </Button>
+                </Link>
                 <ArrowLink
-                  href='#'
+                  href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'
                   text={cards[2].actions[1].text}
                 />
               </div>
             </CardContent>
 
-            <CardFooter className='p-0 mt-auto'>
-              <div className='aspect-video w-full bg-muted' />
+            <CardFooter className='mt-auto p-0'>
+              <div className='relative aspect-video w-full overflow-hidden rounded-b-xl bg-muted'>
+                <Image
+                  src={cards[2].img}
+                  alt={cards[2].title}
+                  fill
+                  className='object-cover transition-transform duration-500 hover:scale-105'
+                />
+              </div>
             </CardFooter>
           </Card>
 

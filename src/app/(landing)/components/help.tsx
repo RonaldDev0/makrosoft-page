@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Help() {
   return (
@@ -15,9 +16,15 @@ export default function Help() {
           </p>
 
           <div className='pt-4'>
-            <Button className='px-8 py-6 text-lg font-bold'>
-              Contactar
-            </Button>
+            <Link
+              href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button className='px-8 py-6 text-lg font-bold'>
+                Contactar
+              </Button>
+            </Link>
           </div>
         </div>
 

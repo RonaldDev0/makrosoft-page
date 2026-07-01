@@ -1,6 +1,7 @@
 import { Monitor, Printer, Wrench, Network, Package, ShieldCheck } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const services = [
   {
@@ -57,10 +58,10 @@ export default function ServiciosPage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4'>
             <Button className='px-6 text-lg font-bold' asChild>
-              <a href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Cotizar ahora</a>
+              <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Cotizar ahora</Link>
             </Button>
             <Button variant='outline' className='px-6 text-lg font-bold' asChild>
-              <a href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Hablar con un asesor</a>
+              <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Hablar con un asesor</Link>
             </Button>
           </div>
         </div>
@@ -83,7 +84,7 @@ export default function ServiciosPage() {
                     <ul className='mt-auto space-y-2 pt-4 border-t'>
                       {service.features.map((f) => (
                         <li key={f} className='flex items-center gap-2 text-sm'>
-                          <span className='h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0' />
+                          <span className='h-1.5 w-1.5 rounded-full bg-primary shrink-0' />
                           {f}
                         </li>
                       ))}
@@ -105,7 +106,7 @@ export default function ServiciosPage() {
               Contáctanos hoy y recibe una propuesta personalizada sin costo para tu empresa.
             </p>
             <Button className='px-8 py-6 text-lg font-bold' asChild>
-              <a href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Solicitar cotización</a>
+              <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>Solicitar cotización</Link>
             </Button>
           </div>
         </div>

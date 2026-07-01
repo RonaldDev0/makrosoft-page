@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Experts() {
   return (
@@ -40,18 +42,28 @@ export default function Experts() {
 
             {/* CTAs */}
             <div className='flex flex-col gap-3 pt-4 sm:flex-row'>
-              <Button className='w-full sm:w-auto'>
-                Conocer más
-              </Button>
-              <Button variant='outline' className='w-full sm:w-auto'>
-                Contactar
-              </Button>
+              <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>
+                <Button className='w-full sm:w-auto'>
+                  Conocer más
+                </Button>
+              </Link>
+              <Link href='https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.' target='_blank' rel='noopener noreferrer'>
+                <Button variant='outline' className='w-full sm:w-auto'>
+                  Contactar
+                </Button>
+              </Link>
             </div>
           </div>
 
           {/* IMG */}
-          <div className='w-full'>
-            <div className='aspect-square w-full rounded-xl border bg-muted' />
+          <div className='relative aspect-[1.2/1] w-full overflow-hidden rounded-xl border'>
+            <Image
+              src='/img/experts.png'
+              alt='Expertos Makrosoft'
+              fill
+              priority
+              className='object-cover transition-transform duration-500 hover:scale-105'
+            />
           </div>
 
         </div>
