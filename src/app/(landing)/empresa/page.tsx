@@ -1,6 +1,7 @@
 import { Users, Target, Eye, Award, Clock, Building2 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const stats = [
   { value: '27+', label: 'Años de experiencia' },
@@ -115,12 +116,19 @@ export default function EmpresaPage() {
                 Nuestra propuesta se fundamenta en la flexibilidad, el soporte continuo y el conocimiento profundo de las necesidades del mercado colombiano.
               </p>
               <div className='flex items-center gap-3 pt-2'>
-                <Building2 className='h-5 w-5 text-muted-foreground flex-shrink-0' />
+                <Building2 className='h-5 w-5 text-muted-foreground shrink-0' />
                 <span className='text-sm text-muted-foreground'>Carrera 29 N 39-47 La Soledad, Bogotá D.C</span>
               </div>
             </div>
             <div className='w-full'>
-              <div className='aspect-square w-full rounded-xl border bg-muted' />
+              <div className='relative aspect-square w-full overflow-hidden rounded-xl border bg-muted'>
+                <Image
+                  src='/img/company.png'
+                  alt='Makrosoft'
+                  fill
+                  className='object-cover transition-transform duration-500 hover:scale-105'
+                />
+              </div>
             </div>
           </div>
         </div>

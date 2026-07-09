@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
+import Image from 'next/image'
 
 interface Item {
   icon: LucideIcon
@@ -65,7 +66,7 @@ export default function Contact() {
 
           {/* Left Column - Contact Items */}
           <div className='flex flex-col gap-6 h-full'>
-            {items.map((item) => {
+            {items.map(item => {
               const Icon = item.icon
               return (
                 <Card key={item.title} className='p-6 flex-1 flex flex-col justify-center'>
@@ -93,9 +94,17 @@ export default function Contact() {
             })}
           </div>
 
-          {/* Right Column - Map */}
+          {/* Right Column - Image */}
           <div className='sticky top-8'>
-            <div className='aspect-square w-full rounded-xl border bg-muted' />
+            <div className='relative aspect-square w-full overflow-hidden rounded-xl border bg-muted'>
+              <Image
+                src='/img/contact.png'
+                alt='Contáctanos'
+                fill
+                priority
+                className='object-cover transition-transform duration-500 hover:scale-105'
+              />
+            </div>
           </div>
 
         </div>
