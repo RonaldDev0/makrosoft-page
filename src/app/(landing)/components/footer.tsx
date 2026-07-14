@@ -2,17 +2,52 @@ import Logo from './logo'
 import Link from 'next/link'
 import { Facebook, Instagram } from 'lucide-react'
 
-const navigation = [
-  'Inicio',
-  'Equipo',
-  'Servicios',
-  'Historia',
-  'Soluciones',
-  'Contacto',
-  'Empresa',
-  'Blog',
-  'Nosotros',
-  'Recursos'
+type items = {
+  label: string
+  url: string
+}[]
+
+const navigation: items = [
+  {
+    label: 'Inicio',
+    url: '/'
+  },
+  // {
+  //   label: 'Equipo',
+  //   url: ''
+  // },
+  {
+    label: 'Servicios',
+    url: '/servicios'
+  },
+  // {
+  //   label: 'Historia',
+  //   url: ''
+  // },
+  {
+    label: 'Soluciones',
+    url: '/soluciones'
+  },
+  {
+    label: 'Contacto',
+    url: 'https://wa.me/573209313050?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20los%20servicios%20y%20soluciones%20de%20Makrosoft.'
+  },
+  {
+    label: 'Empresa',
+    url: '/empresa'
+  }
+  // {
+  //   label: 'Blog',
+  //   url: ''
+  // },
+  // {
+  //   label: 'Nosotros',
+  //   url: ''
+  // },
+  // {
+  //   label: 'Recursos',
+  //   url: ''
+  // }
 ]
 
 export default function Footer() {
@@ -64,10 +99,10 @@ export default function Footer() {
           {/* Navigation */}
           <nav aria-label='Footer navigation'>
             <ul className='grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-8 font-medium'>
-              {navigation.map((item) => (
-                <li key={item}>
-                  <Link href='/' className='hover:underline'>
-                    {item}
+              {navigation.map(item => (
+                <li key={item.label}>
+                  <Link href={item.url} className='hover:underline'>
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -80,9 +115,9 @@ export default function Footer() {
           <p>© 2026 Makrosoft. Todos los derechos reservados</p>
 
           <div className='flex flex-col gap-3 md:flex-row md:gap-6 underline'>
-            <Link href='/'>Política de Privacidad</Link>
-            <Link href='/'>Términos de Servicio</Link>
-            <Link href='/'>Configuración de cookies</Link>
+            <Link href='/politica-de-privacidad'>Política de Privacidad</Link>
+            <Link href='/terminos-de-servicio'>Términos de Servicio</Link>
+            {/* <Link href='/'>Configuración de cookies</Link> */}
           </div>
         </div>
       </div>

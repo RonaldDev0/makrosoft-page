@@ -19,25 +19,25 @@ const testimonials: Testimonial[] = [
     user: {
       name: 'John Doe',
       image: 'https://github.com/shadcn.png',
-      role: 'CTO | Makrosoft'
+      role: 'CEO | NEWREST'
     },
     quote: 'This is a testimonial',
     cualification: 4
   },
   {
     user: {
-      name: 'Doe John',
+      name: 'John Doe',
       image: 'https://github.com/shadcn.png',
-      role: 'CTO | Google'
+      role: 'CEO | CRUZ ROJA'
     },
     quote: 'This is a good tool for my busines',
-    cualification: 3
+    cualification: 4
   },
   {
     user: {
-      name: 'Bill Gates',
+      name: 'John Doe',
       image: 'https://github.com/shadcn.png',
-      role: 'CEO | Amazon'
+      role: 'CEO | MAXICASSA'
     },
     quote: 'This is amazing tools',
     cualification: 5
@@ -120,9 +120,9 @@ export default function Testimonials() {
 
         {/* Grid */}
         <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          {testimonials.map(testimonial => (
+          {testimonials.map((testimonial, i) => (
             <TestimonialCard
-              key={testimonial.user.name}
+              key={i}
               testimonial={testimonial}
             />
           ))}
