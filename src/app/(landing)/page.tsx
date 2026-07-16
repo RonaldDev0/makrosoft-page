@@ -5,7 +5,7 @@ import Benefits from './components/benefits'
 import Faq from './components/faq'
 import Help from './components/help'
 import Contact from './components/contact'
-import Testimonials from './components/testimonials'
+// import Testimonials from './components/testimonials'
 
 export default function Page() {
   return (
@@ -17,7 +17,7 @@ export default function Page() {
       <Faq />
       <Help />
       <Contact />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </main>
   )
 }
