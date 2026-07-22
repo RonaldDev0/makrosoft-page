@@ -6,13 +6,13 @@ import Link from 'next/link'
 const services = [
   {
     icon: Monitor,
-    title: 'Arriendo de Computadores',
+    title: 'Alquiler de Computadores',
     description: 'Soluciones flexibles de alquiler de portátiles y equipos de escritorio para empresas, eventos, capacitaciones y proyectos temporales.',
     features: ['Portátiles y All-in-One', 'Equipos de escritorio', 'Periféricos incluidos', 'Actualización tecnológica']
   },
   {
     icon: Printer,
-    title: 'Arriendo de Impresoras',
+    title: 'Alquiler de Impresoras',
     description: 'Equipos de impresión multifuncionales y térmicos bajo contrato flexible, con soporte y suministros incluidos.',
     features: ['Impresoras multifuncionales', 'Impresoras térmicas', 'Gestión de suministros', 'Mantenimiento incluido']
   },

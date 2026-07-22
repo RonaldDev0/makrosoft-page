@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className='flex flex-col gap-8 items-center text-center max-w-3xl'>
         <h1 className='font-bold text-4xl md:text-6xl leading-tight'>
-          Transformamos tu tecnología con soluciones inteligentes
+          Transformamos tus procesos con soluciones inteligentes
         </h1>
 
         <p className='text-base md:text-lg text-muted-foreground'>

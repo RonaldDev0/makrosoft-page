@@ -42,9 +42,9 @@ export default function Faq() {
           <h2 className='text-4xl font-bold text-black'>
             Preguntas
           </h2>
-          <p className='text-gray-700 max-w-xl'>
+          {/* <p className='text-gray-700 max-w-xl'>
             Resolvemos todas tus dudas sobre nuestros servicios de arriendo tecnológico
-          </p>
+          </p> */}
         </div>
 
         {/* FAQ list */}

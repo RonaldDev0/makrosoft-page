@@ -1,8 +1,8 @@
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 interface ICard {
   subtitle: string
@@ -83,7 +83,7 @@ export default function Benefits() {
             Beneficios
           </span>
           <h2 className='text-3xl font-bold sm:text-4xl lg:text-5xl'>
-            Por qué elegir Makrosoft
+            ¿Por qué elegir Makrosoft?
           </h2>
           <p className='text-muted-foreground'>
             Soluciones tecnológicas adaptadas a las necesidades de tu empresa
@@ -125,7 +125,7 @@ export default function Benefits() {
                     </div>
                   </div>
 
-                  {/* Image */}
+                  {/* Image
                   <div className='relative md:w-5/12 min-h-[180px] overflow-hidden bg-muted'>
                     <Image
                       src={card.img}
@@ -133,7 +133,7 @@ export default function Benefits() {
                       fill
                       className='object-cover transition-transform duration-500 hover:scale-105'
                     />
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             ))}
@@ -165,7 +165,7 @@ export default function Benefits() {
               </div>
             </CardContent>
 
-            <CardFooter className='mt-auto p-0'>
+            {/* <CardFooter className='mt-auto p-0'>
               <div className='relative aspect-video w-full overflow-hidden rounded-b-xl bg-muted'>
                 <Image
                   src={cards[2].img}
@@ -174,7 +174,7 @@ export default function Benefits() {
                   className='object-cover transition-transform duration-500 hover:scale-105'
                 />
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
 
         </div>

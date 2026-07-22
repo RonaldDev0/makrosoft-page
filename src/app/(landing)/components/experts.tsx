@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Experts() {
   return (
@@ -13,9 +13,9 @@ export default function Experts() {
           <div className='space-y-8 max-w-2xl'>
 
             {/* Eyebrow */}
-            <span className='text-sm font-semibold uppercase tracking-wider'>
+            {/* <span className='text-sm font-semibold uppercase tracking-wider'>
               Expertos
-            </span>
+            </span> */}
 
             {/* Title */}
             <h2 className='text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl'>
@@ -55,7 +55,7 @@ export default function Experts() {
             </div>
           </div>
 
-          {/* IMG */}
+          {/* IMG
           <div className='relative aspect-[1.2/1] w-full overflow-hidden rounded-xl border'>
             <Image
               src='/img/experts.png'
@@ -64,7 +64,7 @@ export default function Experts() {
               priority
               className='object-cover transition-transform duration-500 hover:scale-105'
             />
-          </div>
+          </div> */}
 
         </div>
       </div>
