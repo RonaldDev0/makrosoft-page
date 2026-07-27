@@ -158,7 +158,7 @@ export const cities: City[] = [
   {
     id: 'barranquilla',
     name: 'Barranquilla',
-    coordinates: [-74.78132, 10.96854],
+    coordinates: [-74.80191, 10.96389],
     label: {
       side: 'left',
       dx: -18,
