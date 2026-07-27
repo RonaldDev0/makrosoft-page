@@ -12,7 +12,10 @@ const coverageDepartments = [
   'Cundinamarca',
   'Meta',
   'Casanare',
-  'Valle del Cauca'
+  'Valle del Cauca',
+  'Antioquia',
+  'La Guajira',
+  'Caldas'
 ]
 
 export default function Map() {

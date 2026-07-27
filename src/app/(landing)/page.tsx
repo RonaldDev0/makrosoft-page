@@ -9,6 +9,7 @@ import Contact from './components/contact'
 
 import WhoAreWe from './components/who-are-we'
 import Coverage from './components/coverage'
+import ValueProposition from './components/value-proposition'
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
       {/* <Experts /> */}
       <Benefits />
       <Coverage />
+      <ValueProposition />
       <Faq />
       <Help />
       <Contact />

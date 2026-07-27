@@ -17,9 +17,9 @@ export const cities: City[] = [
     name: 'Ciénaga',
     coordinates: [-74.247, 11.007],
     label: {
-      side: 'left',
-      dx: -18,
-      dy: 0
+      side: 'bottom',
+      dx: 0,
+      dy: 18
     }
   },
 
@@ -131,5 +131,62 @@ export const cities: City[] = [
       dx: 18,
       dy: 0
     }
+  },
+
+  {
+    id: 'medellin',
+    name: 'Medellín',
+    coordinates: [-75.57151, 6.245],
+    label: {
+      side: 'left',
+      dx: -18,
+      dy: 0
+    }
+  },
+
+  {
+    id: 'riohacha',
+    name: 'Riohacha',
+    coordinates: [-72.90722, 11.54444],
+    label: {
+      side: 'right',
+      dx: 18,
+      dy: 0
+    }
+  },
+
+  {
+    id: 'barranquilla',
+    name: 'Barranquilla',
+    coordinates: [-74.78132, 10.96854],
+    label: {
+      side: 'left',
+      dx: -18,
+      dy: 0
+    }
+  },
+
+  {
+    id: 'manizales',
+    name: 'Manizales',
+    coordinates: [-75.50684, 5.0668],
+    label: {
+      side: 'left',
+      dx: -18,
+      dy: 0
+    }
+  },
+
+  {
+    id: 'buenaventura',
+    name: 'Buenaventura',
+    coordinates: [-77.03116, 3.8801],
+    label: {
+      side: 'left',
+      dx: -18,
+      dy: 0
+    }
   }
 ]
+
+// mendez ( pueblo tolima )

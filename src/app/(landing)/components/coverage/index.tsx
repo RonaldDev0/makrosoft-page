@@ -1,8 +1,9 @@
+'use client'
 import Map from './map'
 
 export default function Coverage() {
   return (
-    <section id='help' className='my-16 py-16 lg:py-24'>
+    <section id='coverage' className='my-16 py-16 lg:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 
         <div className='grid items-center gap-16 lg:grid-cols-[0.85fr_1.15fr]'>
