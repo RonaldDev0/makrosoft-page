@@ -1,5 +1,6 @@
 'use client'
 
+import { useSyncExternalStore } from 'react'
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
 import { cities } from './cities'
 import MarkerCity from './marker'
@@ -18,10 +19,37 @@ const coverageDepartments = [
   'Caldas'
 ]
 
+function subscribe(callback: () => void) {
+  const mq = window.matchMedia('(min-width: 1024px)')
+
+  mq.addEventListener('change', callback)
+  return () => mq.removeEventListener('change', callback)
+}
+
+function getSnapshot() {
+  return window.matchMedia('(min-width: 1024px)').matches
+}
+
+function getServerSnapshot() {
+  return false
+}
+
+function useIsDesktop() {
+  return useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot
+  )
+}
+
 export default function Map() {
+  const isDesktop = useIsDesktop()
+
+  console.log({ isDesktop })
+
   return (
     <ComposableMap
-      width={100}
+      width={isDesktop ? 100 : 600}
       height={810}
       projection='geoMercator'
       projectionConfig={{
