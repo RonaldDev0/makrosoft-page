@@ -45,8 +45,6 @@ function useIsDesktop() {
 export default function Map() {
   const isDesktop = useIsDesktop()
 
-  console.log({ isDesktop })
-
   return (
     <ComposableMap
       width={isDesktop ? 100 : 600}

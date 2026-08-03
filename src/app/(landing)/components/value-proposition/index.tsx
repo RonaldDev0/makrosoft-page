@@ -1,35 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-
-// ─────────────────────────────────────────────────────────────
-// 1. MARCA — ajustá este azul al hex exacto de tu botón 'Cotizar'
-// ─────────────────────────────────────────────────────────────
-const BRAND = {
-  accent: '#3B4CF6',
-  accentSoft: '#EAF0FE',
-  ink: '#0F1115',
-  inkSoft: '#6B7280',
-  border: '#111827'
-}
-
-// ─────────────────────────────────────────────────────────────
-// 2. CONTENIDO — reemplazá con tus 6 propuestas de valor reales
-// ─────────────────────────────────────────────────────────────
-type ValueItem = {
-  id: number
-  title: string
-  description: string
-}
-
-const items: ValueItem[] = [
-  { id: 1, title: 'Soluciones integrales y Personalizadas', description: 'Diseñamos cada propuesta según las necesidades reales de tu empresa, no un paquete genérico.' },
-  { id: 2, title: 'Ahorro y Optimización de Recursos', description: 'Evitá la inversión inicial en equipos y liberá capital para lo que hace crecer tu negocio.' },
-  { id: 3, title: 'Respaldo de las mejores marcas a nivel mundial', description: 'Trabajamos con equipos originales de fabricantes líderes como HP, Epson, Lenovo y Ricoh.' },
-  { id: 4, title: 'Flexibilidad y Escalabilidad en Servicios', description: 'Ajustá tu plan hacia arriba o hacia abajo a medida que tu operación cambia.' },
-  { id: 5, title: 'Inmediatez, entregas el mismo dia', description: 'Coordinamos la entrega e instalación de tus equipos en el mismo día de la solicitud.' },
-  { id: 6, title: 'Circulación sostenible', description: 'Extendemos la vida útil de cada equipo con mantenimiento y reacondicionamiento responsable.' }
-]
+import { BRAND } from './colors'
+import { items } from './data'
 
 // ─────────────────────────────────────────────────────────────
 // 3. GEOMETRÍA — arco de 270° (180° original + 90°), abierto hacia abajo
@@ -187,7 +160,7 @@ export default function ValuePropArc() {
                   <span className='font-extrabold tracking-tight text-lg flex-1' style={{ color: BRAND.ink }}>
                     {item.title}
                   </span>
-                  <span className='text-neutral-400 text-xl leading-none'>{isOpen ? '–' : '+'}</span>
+                  <span className='text-neutral-400 text-xl leading-none'>{isOpen ? '-' : '+'}</span>
                 </button>
                 {isOpen && (
                   <div className='px-5 pb-5 fade-up'>
