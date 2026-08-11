@@ -24,7 +24,7 @@ import Logo from './logo'
 const navItems = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/servicios' },
-  { label: 'Soluciones', href: '/soluciones' },
+  // { label: 'Soluciones', href: '/soluciones' },
   { label: 'Empresa', href: '/empresa' }
 ]
 
@@ -87,7 +87,7 @@ export default function NavBar() {
                     <span className='sr-only'>Abrir menú</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
+                <SheetContent side='right' className='w-75 sm:w-100'>
                   <SheetHeader>
                     <SheetTitle>Navegación</SheetTitle>
                     <SheetDescription>

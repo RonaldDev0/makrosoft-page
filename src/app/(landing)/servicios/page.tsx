@@ -1,4 +1,4 @@
-import { Monitor, Printer, Wrench, Network, Package, ShieldCheck } from 'lucide-react'
+import { Monitor, Printer, Wrench, Network, Package, ShieldCheck, MonitorIcon, ShoppingCart } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -15,6 +15,18 @@ const services = [
     title: 'Alquiler de Impresoras',
     description: 'Equipos de impresión multifuncionales y térmicos bajo contrato flexible, con soporte y suministros incluidos.',
     features: ['Impresoras multifuncionales', 'Impresoras térmicas', 'Gestión de suministros', 'Mantenimiento incluido']
+  },
+  {
+    icon: MonitorIcon,
+    title: 'Pantallas',
+    description: 'Impulse sus espacios con pantallas interactivas y tecnología LED de alto impacto. Ofrecemos innovacion, conectividad y una experiencia visual superior para entornos empresariales y educativos',
+    features: ['Pantallas interactivas', 'Tecnología LED de alto impacto', 'Conectividad', 'Experiencia visual superior']
+  },
+  {
+    icon: ShoppingCart,
+    title: 'Comercializacíon de Tecnología',
+    description: 'Computadores, impresoras, suministros y repuestos de calidad, entregas rapidas y atencíon personalizada para que su oficina funcione sin interrupciones,',
+    features: ['Computadores', 'Impresoras', 'Suministros y repuestos', 'Entregas rápidas', 'Atención personalizada']
   },
   {
     icon: Wrench,
@@ -54,6 +66,9 @@ export default function ServiciosPage() {
             Soluciones tecnológicas para tu empresa
           </h1>
           <p className='text-base md:text-lg text-muted-foreground'>
+            En Makrosoft de Colombia entendemos que la agilidad y la eficiencia son claves para el éxito de tu negocio. Por eso, ofrecemos soluciones flexibles de alquiler de computadores, impresoras y multifuncionales, a medida y al alcance de su empresa
+          </p>
+          <p className='text-base md:text-lg text-muted-foreground'>
             Con 27 años de experiencia ofrecemos servicios de arriendo tecnológico, soporte técnico e infraestructura adaptados a las necesidades de cada negocio.
           </p>
           <div className='flex flex-col sm:flex-row gap-4'>
@@ -71,10 +86,10 @@ export default function ServiciosPage() {
       <section className='py-16 lg:py-24'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-            {services.map((service) => {
+            {services.map(service => {
               const Icon = service.icon
               return (
-                <Card key={service.title} className='flex flex-col'>
+                <Card key={service.title} className='flex flex-col hover:border-primary hover:transition-all'>
                   <CardContent className='p-6 flex flex-col gap-4 flex-1'>
                     <div className='flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10'>
                       <Icon className='h-6 w-6 text-primary' />
@@ -82,7 +97,7 @@ export default function ServiciosPage() {
                     <h2 className='text-xl font-semibold'>{service.title}</h2>
                     <p className='text-sm text-muted-foreground'>{service.description}</p>
                     <ul className='mt-auto space-y-2 pt-4 border-t'>
-                      {service.features.map((f) => (
+                      {service.features?.map(f => (
                         <li key={f} className='flex items-center gap-2 text-sm'>
                           <span className='h-1.5 w-1.5 rounded-full bg-primary shrink-0' />
                           {f}
