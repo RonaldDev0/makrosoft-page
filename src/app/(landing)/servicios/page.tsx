@@ -66,7 +66,7 @@ export default function ServiciosPage() {
             Soluciones tecnológicas para tu empresa
           </h1>
           <p className='text-base md:text-lg text-muted-foreground'>
-            En Makrosoft de Colombia entendemos que la agilidad y la eficiencia son claves para el éxito de tu negocio. Por eso, ofrecemos soluciones flexibles de alquiler de computadores, impresoras y multifuncionales, a medida y al alcance de su empresa
+            En Makrosoft de Colombia entendemos que la agilidad y la eficiencia son claves para el éxito de tu negocio. Por eso, ofrecemos soluciones flexibles de alquiler de computadores, impresoras y multifuncionales, a medida y al alcance de su empresa.
           </p>
           <p className='text-base md:text-lg text-muted-foreground'>
             Con 27 años de experiencia ofrecemos servicios de arriendo tecnológico, soporte técnico e infraestructura adaptados a las necesidades de cada negocio.
