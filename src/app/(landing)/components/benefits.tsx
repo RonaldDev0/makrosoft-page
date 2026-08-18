@@ -34,7 +34,7 @@ const cards: ICard[] = [
   },
   {
     subtitle: 'Tecnología',
-    title: 'Nuestros servicios a su disposición',
+    title: 'Nuestros servicios a tu disposición',
     text: 'En Makrosoft de Colombia entendemos que la agilidad y la eficiencia son claves para el éxito de tu negocio. Por eso, ofrecemos soluciones flexibles de alquiler de computadores, portátiles, impresoras y multifuncionales, adaptadas a tus necesidades operativas, eventos, capacitaciones o proyectos temporales para empresas',
     labelAction: 'Explorar',
     img: '/img/tecnology.png'
